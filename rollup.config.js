@@ -67,6 +67,7 @@ const bundleConfig = {
 };
 
 export default [
+  // ES5 Browser Bundle
   {
     ...bundleConfig,
     output: {
@@ -86,6 +87,8 @@ export default [
       .concat(terserInstance)
       .concat(bundleConfig.plugins.slice(-1)),
   },
+  // ------------------
+  // ES6 Browser Bundle
   {
     ...bundleConfig,
     output: {
@@ -136,4 +139,5 @@ export default [
         .concat(bundleConfig.plugins.slice(-1)),
     ],
   },
+  // ------------------
 ];
