@@ -54,6 +54,7 @@
     "webpack": "^4.30.0"
   },
   "scripts": {
+    "prepare": "run-s build",
     "build": "run-s build:dist build:esm build:bundle",
     "build:bundle": "rollup --config",
     "build:bundle:watch": "rollup --config --watch",
